@@ -19,7 +19,7 @@ pub use minimax_append_think_parser::MiniMaxAppendThinkParser;
 /// `KimiK2ParserConfig::default().section_start` in `crate::tool_calling::config`.
 pub(crate) const KIMI_K2_TOOL_SECTION_BEGIN: &str = "<|tool_calls_section_begin|>";
 
-static REASONING_PARSER_MAP: OnceLock<HashMap<&'static str, ReasoningParserType>> = OnceLock::new();
+static REASONING_PARSER_MAP: OnceLock<HashMap<&'static str, ParserConfig>> = OnceLock::new();
 
 #[derive(Debug, Clone, Copy)]
 struct ParserConfig {
