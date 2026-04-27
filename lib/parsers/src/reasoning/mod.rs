@@ -69,9 +69,9 @@ fn get_reasoning_parser_map() -> &'static HashMap<&'static str, ParserConfig> {
         // the HF model / vLLM recipe / chat-template author picked. We accept
         // all three separator conventions (snake / kebab / concat) rather than
         // force a single canonical form on users.
-        map.insert("deepseek_v4", ParserConfig::new(DeepSeekV4));
-        map.insert("deepseek-v4", ParserConfig::new(DeepSeekV4));
-        map.insert("deepseekv4", ParserConfig::new(DeepSeekV4));
+        map.insert("deepseek_v4", ParserConfig::with_key(DeepSeekV4, "thinking"));
+        map.insert("deepseek-v4", ParserConfig::with_key(DeepSeekV4, "thinking"));
+        map.insert("deepseekv4", ParserConfig::with_key(DeepSeekV4, "thinking"));
         map.insert("nemotron_deci", ParserConfig::new(NemotronDeci));
         map.insert("kimi", ParserConfig::new(Kimi));
         map.insert("kimi_k25", ParserConfig::with_key(KimiK25, "thinking"));
